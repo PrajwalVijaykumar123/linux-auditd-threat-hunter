@@ -1,0 +1,9 @@
+type=SYSCALL msg=audit(1731938000.100:1001): arch=c000003e syscall=59 success=yes exit=0 a0=55a1b2c3d4e5 a1=55a1b2c3d500 a2=55a1b2c3d510 a3=0 items=2 ppid=100 pid=1001 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=1 comm="ls" exe="/bin/ls" subj=unconfined key=(null)
+type=EXECVE msg=audit(1731938000.100:1001): argc=2 a0="ls" a1="-la"
+type=CWD msg=audit(1731938000.100:1001):  cwd="/home/user"
+type=PATH msg=audit(1731938000.100:1001): item=0 name="/bin/ls" inode=131097 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL
+
+type=SYSCALL msg=audit(1731938001.100:1002): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=55a1b2c3d4e5 a2=0 a3=0 items=1 ppid=100 pid=1002 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=1 comm="cat" exe="/bin/cat" subj=unconfined key=(null)
+type=PATH msg=audit(1731938001.100:1002): item=0 name="/home/user/notes.txt" inode=204812 dev=08:01 mode=0100644 ouid=1000 ogid=1000 rdev=00:00 nametype=NORMAL
+
+type=SYSCALL msg=audit(1731938002.100:1003): arch=c000003e syscall=42 success=yes exit=0 a0=3 a1=55a1b2c3d4e5 a2=16 a3=0 items=0 ppid=100 pid=1003 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=1 comm="curl" exe="/usr/bin/curl" subj=unconfined key=(null)
